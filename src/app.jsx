@@ -10,7 +10,7 @@ import Bugs from "./pages/bugs";
 import Users from "./pages/users";
 import Tablet from "./pages/tablet";
 import Repo from "./pages/repo";
-import List from "./components/list";
+import Card from "./components/card";
 import { UserOutlined } from "@ant-design/icons";
 
 
@@ -36,7 +36,7 @@ const App = () => {
               {active === "users" ? <Users /> :""}
               {active === "tablet" ? <Tablet /> :""}
               {active === "repo" ? <Repo /> :""}
-              {active === "list" ? <List /> :""}
+              {active === "card" ? <Card /> :""}
             </Main>
         </Styles>
     )

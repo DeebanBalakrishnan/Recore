@@ -2,7 +2,7 @@ import {getUser} from "../utils";
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import Table from "../components/table";
-import List from "../components/list";
+import Card from "../components/card";
 
 
 const Styles = styled.div`
@@ -102,7 +102,7 @@ const Repo =(props)=>{
                 <button type="button">Search</button>
             </div>
 {active === "table" ?<Table data={Data} /> : null}
-{active === "list" ?<List data={Data} /> : null}
+{active === "card" ?<Card data={Data} /> : null}
 
 
 
