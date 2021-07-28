@@ -3,8 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import { HomeOutlined, SettingOutlined, ProfileOutlined, CalendarOutlined,
      NotificationOutlined, TabletOutlined, UserOutlined , GithubOutlined} from "@ant-design/icons"
+import {  NavLink } from "react-router-dom";
 
 const Styles = styled.div`
+position:fixed;
 
 width:40px;
     background-color:#8a8af8;
@@ -15,7 +17,7 @@ width:40px;
         height:20px;
         margin-top:25px;
         margin-left:10px;
-    &.active{
+    .active{
         svg{
             fill: red;
         }
@@ -62,35 +64,39 @@ const Sidebar = (props) => {
 
 
 
-            <div className={props.active === "home" ? "icons active" : "icons" }>
-                <a href="#"  onClick={() => props.changeRoute("home")}><HomeOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#"  onClick={() => props.changeRoute("home")}><HomeOutlined /></a> */}
+                                <NavLink activeClassName="active" exact  to="/"><HomeOutlined /></NavLink>
             </div>
             
-            <div className={props.active === "users" ? "icons active" : "icons" }>
-                <a href="#"  onClick={() => props.changeRoute("users")}><UserOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#"  onClick={() => props.changeRoute("users")}><UserOutlined /></a> */}
+                                <NavLink activeClassName="active" exact  to="/" ><UserOutlined /></NavLink>
             </div>
             
-            <div className={props.active === "settings" ? "icons active" : "icons" }>
-                <a href="#" onClick={() => props.changeRoute("settings")}><SettingOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("settings")}><SettingOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/settings" ><SettingOutlined /></NavLink>
             </div>
-            <div className={props.active === "profile" ? "icons active" : "icons" }>
-                <a href="#"
-                onClick={() => props.changeRoute("profile")}><ProfileOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("profile")}><ProfileOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/profile" ><ProfileOutlined /></NavLink>
             </div>
-            <div className={props.active === "list" ? "icons active" : "icons" }>
-                <a href="#" onClick={() => props.changeRoute("list")}><CalendarOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("list")}><CalendarOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/list" ><CalendarOutlined /></NavLink>
             </div>
-            <div className={props.active === "notification" ? "icons active" : "icons" }>
-                <a href="#"
-                onClick={() => props.changeRoute("notification")}><NotificationOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("notification")}><NotificationOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/notification" ><NotificationOutlined /></NavLink>
             </div>
-            <div className={props.active === "tablet" ? "icons active" : "icons" }>
-                <a href="#"
-                onClick={() => props.changeRoute("tablet")}><TabletOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("tablet")}><TabletOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/tablet" ><TabletOutlined /></NavLink>
             </div>
-            <div className={props.active === "repo" ? "icons active" : "icons" }>
-                <a href="#"
-                onClick={() => props.changeRoute("repo")}><GithubOutlined /></a>
+            <div className="icons">
+                               {/* <a href="#" onClick={() => props.changeRoute("repo")}><GithubOutlined /></a> */}
+                                <NavLink activeClassName="active"  to="/repo" ><GithubOutlined /></NavLink>
             </div>
 
 

@@ -13,6 +13,7 @@ const Table = (props) => {
             <table>
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Name</th>
                         <th>url</th>
                         <th>description</th>
@@ -31,6 +32,7 @@ const Table = (props) => {
                 <tbody>
                     {props.data.map((item, index) => (
                         <tr>
+                            <td>{index+1}</td>
                             <td>{item.name}</td>
                             <td>{item.url}</td>
                             <td>{item.description}</td>

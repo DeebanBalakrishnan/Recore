@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import Table from "../components/table";
 import Card from "../components/card";
+import List from "../components/list";
 
 
 const Styles = styled.div`
@@ -103,6 +104,7 @@ const Repo =(props)=>{
             </div>
 {active === "table" ?<Table data={Data} /> : null}
 {active === "card" ?<Card data={Data} /> : null}
+{ active === "list" ?<List data={Data} />: null}
 
 
 

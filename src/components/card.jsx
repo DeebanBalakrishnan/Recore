@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {ForkOutlined,StarOutlined} from "@ant-design/icons";
-import { generateData } from "../utils";
 const Styles = styled.div`
 
-margin-top: 50px;
-
+/* margin-top: 50px; */
 /* .job{
     width:30%;
     border:1px solid black;
@@ -46,6 +44,7 @@ overflow: hidden;
     border-radius:10px;
     float:left;
     margin:5px;
+    height: 140px;
     h1{
     width: 80%;
     text-overflow: ellipsis;
@@ -91,7 +90,15 @@ overflow: hidden;
     background-color:blue;
     font-weight:50px;
 }
+.description{
+     width: 83%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: center;
 
+}
 
 
 
@@ -99,12 +106,11 @@ overflow: hidden;
 
 `;
 
-const Card =()=>{
-    const Data = generateData(15)
+const Card =(props)=>{
     return(
         <>
         {
-          Data.map((item,index)=>(
+          props.data.map((item,index)=>(
         
            <Styles>
             <div className="job">
@@ -112,11 +118,11 @@ const Card =()=>{
                     <img src={item.profile_img}/> 
                 </div>
                 <div className="details">
-                    <p>NaveenDA</p>
+                    <p>{item.name}</p>
                 <h1 title={item.title}>{item.title}</h1>
-                    <a>🌈 A UI Design Language</a>
+                    <a className="description">{item.description}</a>
                 </div>
-                <div className="name" >Language</div>
+                <div className="name" >{item.language ? item.language:"nill"}</div>
                 <div className="icons">
                     <a href="https://api.github.com/repos/NaveenDA/ant-design-landing/forks"><ForkOutlined /></a>
                 </div>

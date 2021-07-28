@@ -11,7 +11,11 @@ import Users from "./pages/users";
 import Tablet from "./pages/tablet";
 import Repo from "./pages/repo";
 import Card from "./components/card";
+import List from "./components/list";
 import { UserOutlined } from "@ant-design/icons";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+
+
 
 
 
@@ -25,11 +29,21 @@ const App = () => {
     }
 
     return (
+        <BrowserRouter>
         <Styles>
             <Sidebar active={active} changeRoute={changeRoute} />
             <Main changeRoute={changeRoute} >
-
-                {active === "home" ? <Home /> : ""}
+<Switch>
+    <Route path="/settings" component={Settings} />
+    <Route path="/notification" component={Notification} />
+    <Route path="/bugs" component={Bugs} />
+    <Route path="/users" component={Users} />
+    <Route path="/repo" component={Repo} />
+    <Route path="/tablet" component={Tablet} />
+    <Route path="/" component={Home} />
+    
+</Switch>
+                {/* {active === "home" ? <Home /> : ""}
                 {active === "settings" ? <Settings /> : ""}
                 {active === "notification" ? <Notification /> :""}
                 {active === "bugs" ? <Bugs/> :""}
@@ -37,8 +51,10 @@ const App = () => {
               {active === "tablet" ? <Tablet /> :""}
               {active === "repo" ? <Repo /> :""}
               {active === "card" ? <Card /> :""}
+              {active === "list" ? <List /> :""} */}
             </Main>
         </Styles>
+        </BrowserRouter>
     )
 }
 
