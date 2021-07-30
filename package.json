@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy":"npm run build && netify deploy --prod"
+    "deploy":"npm run build && netlify deploy --prod"
   },
   "eslintConfig": {
     "extends": [
