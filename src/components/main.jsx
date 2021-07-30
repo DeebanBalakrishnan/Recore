@@ -8,6 +8,7 @@ const Styles =styled.div`
     background-color:white;
     height:100vh;
     float:left;
+    margin-left: 40px;
 
 `;
 

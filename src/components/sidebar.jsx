@@ -65,44 +65,31 @@ const Sidebar = (props) => {
 
 
             <div className="icons">
-                               {/* <a href="#"  onClick={() => props.changeRoute("home")}><HomeOutlined /></a> */}
                                 <NavLink activeClassName="active" exact  to="/"><HomeOutlined /></NavLink>
             </div>
             
             <div className="icons">
-                               {/* <a href="#"  onClick={() => props.changeRoute("users")}><UserOutlined /></a> */}
                                 <NavLink activeClassName="active" exact  to="/" ><UserOutlined /></NavLink>
             </div>
             
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("settings")}><SettingOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/settings" ><SettingOutlined /></NavLink>
             </div>
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("profile")}><ProfileOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/profile" ><ProfileOutlined /></NavLink>
             </div>
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("list")}><CalendarOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/list" ><CalendarOutlined /></NavLink>
             </div>
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("notification")}><NotificationOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/notification" ><NotificationOutlined /></NavLink>
             </div>
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("tablet")}><TabletOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/tablet" ><TabletOutlined /></NavLink>
             </div>
             <div className="icons">
-                               {/* <a href="#" onClick={() => props.changeRoute("repo")}><GithubOutlined /></a> */}
                                 <NavLink activeClassName="active"  to="/repo" ><GithubOutlined /></NavLink>
             </div>
-
-
-
-
-
         </Styles>
     )
 }

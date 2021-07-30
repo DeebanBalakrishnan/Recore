@@ -32,26 +32,16 @@ const App = () => {
         <BrowserRouter>
         <Styles>
             <Sidebar active={active} changeRoute={changeRoute} />
-            <Main changeRoute={changeRoute} >
-<Switch>
-    <Route path="/settings" component={Settings} />
-    <Route path="/notification" component={Notification} />
-    <Route path="/bugs" component={Bugs} />
-    <Route path="/users" component={Users} />
-    <Route path="/repo" component={Repo} />
-    <Route path="/tablet" component={Tablet} />
-    <Route path="/" component={Home} />
-    
-</Switch>
-                {/* {active === "home" ? <Home /> : ""}
-                {active === "settings" ? <Settings /> : ""}
-                {active === "notification" ? <Notification /> :""}
-                {active === "bugs" ? <Bugs/> :""}
-              {active === "users" ? <Users /> :""}
-              {active === "tablet" ? <Tablet /> :""}
-              {active === "repo" ? <Repo /> :""}
-              {active === "card" ? <Card /> :""}
-              {active === "list" ? <List /> :""} */}
+            <Main>
+                <Switch>
+                    <Route path="/settings" component={Settings} />
+                    <Route path="/notification" component={Notification} />
+                    <Route path="/bugs" component={Bugs} />
+                    <Route path="/users" component={Users} />
+                    <Route path="/repo" component={Repo} />
+                    <Route path="/tablet" component={Tablet} />
+                    <Route path="/" component={Home} />
+                </Switch>
             </Main>
         </Styles>
         </BrowserRouter>
